@@ -126,10 +126,11 @@ const verificar = () => {
 
 
         }
+        else{
+            
+            return
+        }
         
-        else
-        {alert("no tiene 20 caractereres revise y vuelva a ejecutar")}
-
 
 }
 let AdnMasRepetida = null;
