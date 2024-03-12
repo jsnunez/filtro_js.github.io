@@ -71,3 +71,12 @@ header{
   #contenedor{
     background-color: #f1f1f1;
   }
+#generarUsuario,#analisisADN{    
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+}

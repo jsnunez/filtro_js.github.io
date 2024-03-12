@@ -52,8 +52,44 @@ const enviarDatosciudadano = () => {
     let codigoData = codigoInput.value;
     let celularData = celularInput.value;
     let direccionData = direccionInput.value;
+let bandera=0;
+    if(nameDAta.length<1){
+        alert("no tiene nombre")
+        return
+    }
+    const separarCadena1 = codigoData.split("");
+    console.log(separarCadena1)
+    for(const cidadanos in listaAdn){
+        console.log(listaAdn[cidadanos].codigo_adn)
+        console.log(codigoData)
+        if(listaAdn[cidadanos].codigo_adn==codigoData){
+            alert("el codigo ya se encuentra en la base de datos")
+            return
+        }
+    }
 
-    
+    for(const digito in separarCadena1 ){
+        console.log(separarCadena1[digito])
+        if(separarCadena1[digito]>1){
+          bandera=1
+        }
+    }
+    if(bandera==1){
+        alert("solo se acetan numero 0 y 1 en el codigo")
+        return
+    }
+    if(codigoData.length=!19){
+        alert("error en el ingreso del codigo")
+        return
+    }
+    if(celularData.length<1){
+        alert("no tiene numero celular")
+        return
+    }
+    if(direccionData.length<1){
+        alert("no tiene dirrecion direccion")
+        return
+    }
     const nuevoCiudadno = {
         id:listaAdn.length+1,
         nombre_completo: nameDAta,
@@ -94,26 +130,7 @@ const verificar = () => {
         else
         {alert("no tiene 20 caractereres revise y vuelva a ejecutar")}
 
-    // let datos1 = 0;
-    // let datos2 = 0;
-    // let datos3 = 0;
-    // 
 
-    // var separarCadena1 = data[0].split("");
-    // var separarCadena2 = data[1].split("");
-    // var separarCadena3 = data[2].split("");
-    // console.log(separarCadena)
-    // for (let i = 0; i <= 19; i++) {
-    //     if (separarCadena[i] == separarCadena1[i]) {
-    //         datos1 = datos1 + 5;
-    //     }
-    //     if (separarCadena[i] == separarCadena2[i]) {
-    //         datos2 = datos2 + 5;
-    //     }
-    //     if (separarCadena[i] == separarCadena3[i]) {
-    //         datos3 = datos3 + 5;
-    //     }
-    // }
 }
 let AdnMasRepetida = null;
 let maxRepeticiones = 0;
@@ -130,6 +147,8 @@ for (let coincidencias in coincideciaSeparar) {
         AdnMasRepetida = coincidencias;
         maxRepeticiones = coincideciaSeparar[coincidencias];
            }
+           console.log(AdnMasRepetida)
+           console.log(maxRepeticiones)
           
 }
 rankingRepetidas[j] =AdnMasRepetida;
@@ -149,7 +168,7 @@ for (const rank of rankingRepetidas) {
     l++
 }
 tablaInput.innerHTML=options
-alert(`la coicicencia es de ${listacoincidencias[x]}`)
+muestraAdn.value=""
 }
 
 

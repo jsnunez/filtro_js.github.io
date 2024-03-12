@@ -16,12 +16,12 @@
                 
                 <li>
                     <a onclick=pagina1()>
-                        <h1>ciudadano</h1>
+                        <h1>Ciudadano</h1>
                     </a>
                 </li>   
                 <li>
                     <a onclick=pagina2()>
-                        <h1>analisis ADN</h1>
+                        <h1>Analisis ADN</h1>
                     </a>
                 </li>
             </ul>
@@ -36,33 +36,40 @@
             <ul>
               <li>
                 <label for="name">Nombre:</label>
+                <div class="input-group">
                 <input type="text" id="name" name="userName" />
               </li>
               <li>
                 <label for="ADN">Codigo ADN:</label>
+                <div class="input-group">
                 <input type="number" id="ADN" name="userAdn" />
               </li>
               <li>
                 <label for="celular">celular:</label>
+                <div class="input-group">
                 <input type="number" id="celular" name="userCelular" />
               </li>
               <li>
                 <label for="direccion">direccion:</label>
+                <div class="input-group">
                 <input type="text" id="direccion" name="userdireccion" />
               </li>
             </ul>
           </form>
+          
 <div>
     <button onclick="enviarDatosciudadano()">guardar</button>
 </div>
     </div>
     <div id="analisisADN">
-        <form action="/my-handling-form-page" method="post">
+        <form >
+            <div class="form-group">
             <ul>
                 <label for="ADN">Codigo ADN:</label>
                 <input type="number" id="ADNR" name="userAdnr" />
               </li>
             </ul>
+        </div>
             </form>
 
               <div>
@@ -70,7 +77,7 @@
             </div>
 
            
-            <div>
+           
                 <table  class="table">
                     <h2>resultados</h2>
                     <thead>
@@ -91,7 +98,8 @@
                      
                   </table>
             </div>
-           
+        </div>
+        
           
 
     </div>
