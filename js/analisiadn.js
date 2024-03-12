@@ -126,10 +126,7 @@ const verificar = () => {
 
 
         }
-        else{
-            
-            return
-        }
+        else{}
         
 
 }
