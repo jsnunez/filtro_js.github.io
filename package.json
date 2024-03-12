@@ -1,0 +1,12 @@
+{
+  "name": "filtro",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000f\u0000i\u0000l\u0000t\u0000r\u0000o\u0000_\u0000j\u0000s\u0000.\u0000g\u0000i\u0000t\u0000h\u0000u\u0000b\u0000.\u0000i\u0000o\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch ./db/db.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+    <header>
+        <div id="nav">
+            <ul >
+                
+                <li>
+                    <a onclick=pagina1()>
+                        <h1>ciudadano</h1>
+                    </a>
+                </li>   
+                <li>
+                    <a onclick=pagina2()>
+                        <h1>analisis ADN</h1>
+                    </a>
+                </li>
+            </ul>
+        </div> 
+             
+    </header>
+    <div id="contenedor">
+
+    
+    <div id="generarUsuario">
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+              <li>
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="userName" />
+              </li>
+              <li>
+                <label for="ADN">Codigo ADN:</label>
+                <input type="number" id="ADN" name="userAdn" />
+              </li>
+              <li>
+                <label for="celular">celular:</label>
+                <input type="number" id="celular" name="userCelular" />
+              </li>
+              <li>
+                <label for="direccion">direccion:</label>
+                <input type="text" id="direccion" name="userdireccion" />
+              </li>
+            </ul>
+          </form>
+<div>
+    <button onclick="enviarDatosciudadano()">guardar</button>
+</div>
+    </div>
+    <div id="analisisADN">
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <label for="ADN">Codigo ADN:</label>
+                <input type="number" id="ADNR" name="userAdnr" />
+              </li>
+            </ul>
+            </form>
+
+              <div>
+                <button onclick="verificar()">verificar</button>
+            </div>
+
+           
+            <div>
+                <table  class="table">
+                    <h2>resultados</h2>
+                    <thead>
+                          <tr>
+                          <th><h2>nombre</th>
+                          <th><h2>porcentaje</th>
+                       
+                     
+              
+                          </tr>
+                      </thead>
+                      <tbody id="tablaResultados">
+                    
+                  
+                      </tbody>
+                     
+              
+                     
+                  </table>
+            </div>
+           
+          
+
+    </div>
+</div>
+</body>
+<script src="js/paginas.js"></script>
+
+<script src="js/analisiadn.js"></script>
+<script src="js/app.js"></script>
+
+</html>
